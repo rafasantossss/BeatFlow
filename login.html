@@ -1,35 +1,25 @@
 <html>
- <head>
-  <title>
-   BeatFlow Login
-  </title>
-  <link href="style.css" rel="stylesheet"/>
- </head>
- <body>
-  <div class="container">
-   <div class="logo">
-    <img alt="" src="logo.png"/>
-    <h1>
-     BeatFlow
-    </h1>
-   </div>
-   <h2>
-    Login
-   </h2>
-   <form action="inicio.html">
-    <label for="username">
-     Email ou Usuario
-    </label>
-    <input id="username" placeholder="Login..." type="text"/>
-    <label for="password">
-     Senha
-    </label>
-    <input id="password" placeholder="Senha..." type="password"/>
-    <input type="submit" value="Login"/>
-   </form>
-   <a href="registro.html">
-    Registre-se
-   </a>
-  </div>
- </body>
+<head>
+    <title>BeatFlow Login</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img alt="" src="logo.png"/>
+            <h1>BeatFlow</h1>
+        </div>
+        <h2>Login</h2>
+        <form onsubmit="login(event)">
+            <label for="login-email">Email</label>
+            <input id="login-email" placeholder="Login..." type="text" required/>
+            <label for="login-password">Senha</label>
+            <input id="login-password" placeholder="Senha..." type="password" required/>
+            <input type="submit" value="Login"/>
+        </form>
+        <a href="registro.html">Registre-se</a>
+        <p id="mensagem" style="color: red;"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>

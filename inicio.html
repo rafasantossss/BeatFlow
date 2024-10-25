@@ -385,7 +385,6 @@
   });
   document.getElementById('musicas-cadastradas').innerHTML = html;
   
-  // Adicionar evento de clique ao botão de exclusão
   document.querySelectorAll('.excluir-musica').forEach(button => {
    button.addEventListener('click', function() {
     let index = this.getAttribute('data-index');
