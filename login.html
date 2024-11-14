@@ -1,5 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeatFlow Login</title>
     <link href="style.css" rel="stylesheet"/>
 </head>
@@ -10,9 +13,9 @@
             <h1>BeatFlow</h1>
         </div>
         <h2>Login</h2>
-        <form onsubmit="login(event)">
+        <form id="login-form">
             <label for="login-email">Email</label>
-            <input id="login-email" placeholder="Login..." type="text" required/>
+            <input id="login-email" placeholder="Login..." type="email" required/>
             <label for="login-password">Senha</label>
             <input id="login-password" placeholder="Senha..." type="password" required/>
             <input type="submit" value="Login"/>

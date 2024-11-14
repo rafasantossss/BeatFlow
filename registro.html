@@ -1,6 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-    <title>BeatFlow - Registrar-se</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatFlow Cadastro</title>
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
@@ -9,19 +12,19 @@
             <img alt="" src="logo.png"/>
             <h1>BeatFlow</h1>
         </div>
-        <h2>Registrar-se</h2>
+        <h2>Cadastro</h2>
         <form onsubmit="addUser(event)">
             <label for="name">Nome</label>
-            <input id="name" name="name" placeholder="Nome..." type="text" required/>
+            <input id="name" placeholder="Nome completo..." type="text" required/>
             <label for="email">Email</label>
-            <input id="email" name="email" placeholder="Email..." type="text" required/>
-            <label for="confirm-email">Confirme seu Email</label>
-            <input id="confirm-email" name="confirm-email" placeholder="Confirme seu Email..." type="text" required/>
+            <input id="email" placeholder="Email..." type="email" required/>
+            <label for="confirm-email">Confirmar Email</label>
+            <input id="confirm-email" placeholder="Confirmar email..." type="email" required/>
             <label for="password">Senha</label>
-            <input id="password" name="password" placeholder="Senha..." type="password" required/>
-            <label for="confirm-password">Reescreva a senha</label>
-            <input id="confirm-password" name="confirm-password" placeholder="Senha..." type="password" required/>
-            <input type="submit" value="Registrar"/>
+            <input id="password" placeholder="Senha..." type="password" required/>
+            <label for="confirm-password">Confirmar Senha</label>
+            <input id="confirm-password" placeholder="Confirmar senha..." type="password" required/>
+            <input type="submit" value="Cadastrar"/>
         </form>
         <p id="error" style="color: red;"></p>
         <a href="login.html">Já tenho conta</a>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatFlow - Perfil</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img alt="" src="logo.png"/>
+            <h1>BeatFlow</h1>
+        </div>
+        <h2>Perfil</h2>
+
+        <div class="perfil-info">
+            <p><strong>Nome de Usuário:</strong> <span id="username-display"></span></p>
+            <p><strong>Email:</strong> <span id="email-display"></span></p>
+        </div>
+
+        <button onclick="voltarParaHome()">Voltar para a Página Inicial</button>
+
+        <p id="mensagem" style="color: red;"></p>
+    </div>
+
+    <script>
+        // Função que exibe as informações do perfil
+        function mostrarPerfil() {
+            let username = localStorage.getItem('username');
+            let email = localStorage.getItem('email');
+
+            if (username && email) {
+                document.getElementById('username-display').textContent = username;
+                document.getElementById('email-display').textContent = email;
+            } else {
+                alert('Usuário não encontrado. Faça login novamente.');
+                window.location.href = 'login.html'; // Redireciona para a página de login
+            }
+        }
+
+        // Função para voltar à página inicial
+        function voltarParaHome() {
+            window.location.href = 'inicio.html'; // Ou a página inicial desejada
+        }
+
+        mostrarPerfil(); // Exibe as informações do usuário
+    </script>
+</body>
+</html>
