@@ -30,5 +30,35 @@
         <a href="login.html">Já tenho conta</a>
     </div>
     <script src="script.js"></script>
+
+    <script>
+        function addUser(event) {
+            event.preventDefault();
+            
+            // Coleta os valores dos campos
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const confirmEmail = document.getElementById('confirm-email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            // Verifica se o email e a senha são iguais nos campos de confirmação
+            if (email !== confirmEmail) {
+                document.getElementById('error').textContent = 'Os e-mails não coincidem!';
+                return;
+            }
+            if (password !== confirmPassword) {
+                document.getElementById('error').textContent = 'As senhas não coincidem!';
+                return;
+            }
+
+            // Armazena no localStorage
+            localStorage.setItem('username', name);
+            localStorage.setItem('email', email);
+
+            // Redireciona para a página de login
+            window.location.href = 'login.html';
+        }
+    </script>
 </body>
 </html>
