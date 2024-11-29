@@ -43,7 +43,7 @@ function addUser(event) {
     document.getElementById('error').innerText = 'Usuário cadastrado com sucesso';
 
     setTimeout(() => {
-        window.location.href = 'login.html'; // Redireciona para a página de login após 3 segundos
+        window.location.href = 'index.html'; // Redireciona para a página de login após 3 segundos
     }, 3000);
 }
 
